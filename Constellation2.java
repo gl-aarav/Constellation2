@@ -6,11 +6,6 @@ import javax.swing.JPanel;
 
 public class Constellation2 
 {
-	public void Constellation2()
-	{
-	
-	}
-	
     public static void main (String[] args) 
     {
         Constellation2 c = new Constellation2();
@@ -20,10 +15,10 @@ public class Constellation2
     public void runIt()
     {
         JFrame frame = new JFrame("The Big Dipper");
-        frame.setSize(620, 460); 
+        frame.setSize(818, 460); 
         frame.setLocation(900, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(true);
+        frame.setResizable(false);
         DipperPanel mpPanel = new DipperPanel();
         frame.getContentPane().add(mpPanel);
         frame.setVisible(true);
@@ -45,7 +40,7 @@ class DipperPanel extends JPanel
         {
             if (count % 4 == 0 && count != 0) 
             {
-                x += 152;
+                x += 212;
                 y = -157;
             }
             
@@ -82,13 +77,13 @@ class DipperPanel extends JPanel
         int[] Y = {y + 55, y + 45, y + 50, y + 55, y + 35, y + 60, y + 75, y + 55, y + 50, y + 45, y + 55};
         g.drawPolygon(X, Y, 11);
 
-        g.fillOval(x + 9, y + 54, 2, 2);
-        g.fillOval(x + 41, y + 44, 2, 2);
-        g.fillOval(x + 54, y + 49, 2, 2);
-        g.fillOval(x + 89, y + 54, 2, 2);
-        g.fillOval(x + 134, y + 34, 2, 2);
-        g.fillOval(x + 139, y + 59, 2, 2);
-        g.fillOval(x + 99, y + 74, 2, 2);
+        g.fillOval(x + 8, y + 53, 4, 4);
+        g.fillOval(x + 40, y + 43, 4, 4);
+        g.fillOval(x + 53, y + 48, 4, 4);
+        g.fillOval(x + 88, y + 53, 4, 4);
+        g.fillOval(x + 132, y + 34, 4, 4);
+        g.fillOval(x + 138, y + 58, 4, 4);
+        g.fillOval(x + 98, y + 73, 4, 4);
     }
 
     public void drawPlanet(Graphics g, int x, int y) 
@@ -112,6 +107,6 @@ class DipperPanel extends JPanel
         int[] flameY2 = {y + 95, y + 94, y + 98};
         g.fillPolygon(flameX2, flameY2, 3);
 
-        g.drawArc(x + 5, y + 81, 170, 50, -5, 135); 
+        g.drawArc(x + 5, y + 81, 170, 50, 10, 120); 
     }
 }
